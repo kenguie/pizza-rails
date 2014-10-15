@@ -1,0 +1,8 @@
+<h1>Got an alert?</h1>
+
+<p> Let the world know below </p>
+
+	<%= form_tag('/alert', method: :post) %>
+		<%= text_area_tag :body %>
+		<%= submit_tag, "Let's do this!" %>
+	<% end %>
