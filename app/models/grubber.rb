@@ -18,6 +18,29 @@ class Grubber < ActiveRecord::Base
   		end
 	end 
 
+	def send_text(message_body)
+		# Get your Account Sid and Auth Token from twilio.com/user/account
+		account_sid = ENV['???']
+		auth_token = ENV['???']
+		grubber_system_number = ENV['???']
+		@client = Twilio::REST::Client.new account_sid, auth_token
+ 		mobile = self.mobile
+
+		#testing
+		puts "*" * 40
+		puts "mobile: #{mobile}"
+		puts "message: #{message_body}"
+
+
+		message = @client.account.messages.create(:body => message_body,
+    		:to => mobile,
+    		:from => grubber_system_number
+		puts message.to
+
+	end
+
+
+
 	def send_email(message_body) #instance method
 
 			recipient = [{email: self.email}]
