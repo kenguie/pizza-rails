@@ -1,4 +1,6 @@
 class Grubber < ActiveRecord::Base
+	scope :subscribed, ->{where(subscribed: true) } 
+
 	validates :password, presence: true
 	before_create :configure_new_grubber
 

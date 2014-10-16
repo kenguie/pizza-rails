@@ -680,3 +680,662 @@ ActionController::UrlGenerationError (No route matches {:action=>"show", :contro
   Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
   Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
   Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.6ms)
+
+
+Started POST "/grubbers" for 127.0.0.1 at 2014-10-15 17:36:44 -0400
+Processing by GrubbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXLehykRx7L7Fid9ku4iAW9LG221k5g79zGd+u+VhTI=", "grubber"=>{"email"=>"b@b", "mobile"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create Grubber"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "grubbers" ("created_at", "email", "email_ok", "mobile", "password", "subscribed", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-10-15 21:36:44.768584"], ["email", "b@b"], ["email_ok", "t"], ["mobile", ""], ["password", "123"], ["subscribed", "t"], ["updated_at", "2014-10-15 21:36:44.768584"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Redirected to http://localhost:3010/
+Completed 302 Found in 11ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-15 17:36:44 -0400
+Processing by GrubbersController#new as HTML
+  Rendered grubbers/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-15 17:36:44 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-15 17:36:44 -0400
+
+
+Started GET "/assets/grubbers.js?body=1" for 127.0.0.1 at 2014-10-15 17:36:44 -0400
+
+
+Started GET "/assets/grubbers.css?body=1" for 127.0.0.1 at 2014-10-15 17:36:44 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-15 17:36:44 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-15 17:36:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-15 17:36:44 -0400
+
+
+Started POST "/grubbers" for 127.0.0.1 at 2014-10-15 17:36:59 -0400
+Processing by GrubbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXLehykRx7L7Fid9ku4iAW9LG221k5g79zGd+u+VhTI=", "grubber"=>{"email"=>"b@b", "mobile"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create Grubber"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "grubbers" ("created_at", "email", "email_ok", "mobile", "password", "subscribed", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-10-15 21:36:59.153498"], ["email", "b@b"], ["email_ok", "t"], ["mobile", ""], ["password", "123"], ["subscribed", "t"], ["updated_at", "2014-10-15 21:36:59.153498"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3010/
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-15 17:36:59 -0400
+Processing by GrubbersController#new as HTML
+  Rendered grubbers/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/grubbers.css?body=1" for 127.0.0.1 at 2014-10-15 17:36:59 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-15 17:36:59 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-15 17:36:59 -0400
+
+
+Started GET "/assets/grubbers.js?body=1" for 127.0.0.1 at 2014-10-15 17:36:59 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-15 17:36:59 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-15 17:36:59 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-15 17:36:59 -0400
+
+
+Started POST "/grubbers" for 127.0.0.1 at 2014-10-15 17:56:06 -0400
+Processing by GrubbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXLehykRx7L7Fid9ku4iAW9LG221k5g79zGd+u+VhTI=", "grubber"=>{"email"=>"h@h", "mobile"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create Grubber"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "grubbers" ("created_at", "email", "email_ok", "mobile", "password", "subscribed", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-10-15 21:56:06.956347"], ["email", "h@h"], ["email_ok", "t"], ["mobile", ""], ["password", "123"], ["subscribed", "t"], ["updated_at", "2014-10-15 21:56:06.956347"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3010/
+Completed 302 Found in 30ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-15 17:56:06 -0400
+Processing by GrubbersController#new as HTML
+  Rendered grubbers/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 61ms (Views: 59.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-15 17:56:07 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-15 17:56:07 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-15 17:56:07 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-15 17:56:07 -0400
+
+
+Started GET "/assets/grubbers.css?body=1" for 127.0.0.1 at 2014-10-15 17:56:07 -0400
+
+
+Started GET "/assets/grubbers.js?body=1" for 127.0.0.1 at 2014-10-15 17:56:07 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-15 17:56:07 -0400
+
+
+Started POST "/grubbers" for 127.0.0.1 at 2014-10-15 17:59:12 -0400
+Processing by GrubbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXLehykRx7L7Fid9ku4iAW9LG221k5g79zGd+u+VhTI=", "grubber"=>{"email"=>"e@e", "mobile"=>"34323432", "password"=>"[FILTERED]"}, "commit"=>"Create Grubber"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered grubbers/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 66ms (Views: 49.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/grubbers.css?body=1" for 127.0.0.1 at 2014-10-15 17:59:12 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-15 17:59:12 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-15 17:59:12 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-15 17:59:12 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-15 17:59:12 -0400
+
+
+Started GET "/assets/grubbers.js?body=1" for 127.0.0.1 at 2014-10-15 17:59:12 -0400
+
+
+Started POST "/grubbers" for 127.0.0.1 at 2014-10-15 17:59:19 -0400
+Processing by GrubbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXLehykRx7L7Fid9ku4iAW9LG221k5g79zGd+u+VhTI=", "grubber"=>{"email"=>"e@e", "mobile"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create Grubber"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "grubbers" ("created_at", "email", "email_ok", "mobile", "password", "subscribed", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-10-15 21:59:19.261003"], ["email", "e@e"], ["email_ok", "t"], ["mobile", ""], ["password", "123"], ["subscribed", "t"], ["updated_at", "2014-10-15 21:59:19.261003"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3010/grubbers.8
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/grubbers.8" for 127.0.0.1 at 2014-10-15 17:59:19 -0400
+Processing by GrubbersController#index as 
+  Rendered grubbers/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-15 17:59:19 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-15 17:59:19 -0400
+
+
+Started GET "/assets/grubbers.css?body=1" for 127.0.0.1 at 2014-10-15 17:59:19 -0400
+
+
+Started GET "/assets/grubbers.js?body=1" for 127.0.0.1 at 2014-10-15 17:59:19 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-15 17:59:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-15 17:59:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-15 18:10:19 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-15 18:10:19 -0400
+
+
+Started GET "/assets/grubbers.js?body=1" for 127.0.0.1 at 2014-10-15 18:10:19 -0400
+
+
+Started GET "/assets/grubbers.css?body=1" for 127.0.0.1 at 2014-10-15 18:10:19 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-15 18:10:19 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-15 18:10:19 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-15 18:10:24 -0400
+Processing by GrubbersController#new as HTML
+  Rendered grubbers/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 67ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/grubbers.css?body=1" for 127.0.0.1 at 2014-10-15 18:10:24 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-15 18:10:24 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-15 18:10:24 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-15 18:10:24 -0400
+
+
+Started GET "/assets/grubbers.js?body=1" for 127.0.0.1 at 2014-10-15 18:10:24 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-15 18:10:24 -0400
+
+
+Started POST "/grubbers" for 127.0.0.1 at 2014-10-15 18:10:42 -0400
+Processing by GrubbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXLehykRx7L7Fid9ku4iAW9LG221k5g79zGd+u+VhTI=", "grubber"=>{"email"=>"a@a", "mobile"=>"123-123-1234", "password"=>"[FILTERED]"}, "commit"=>"Create Grubber"}
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered grubbers/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 129ms (Views: 122.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/grubbers.css?body=1" for 127.0.0.1 at 2014-10-15 18:10:43 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-15 18:10:43 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-15 18:10:43 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-15 18:10:43 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-15 18:10:43 -0400
+
+
+Started GET "/assets/grubbers.js?body=1" for 127.0.0.1 at 2014-10-15 18:10:43 -0400
+
+
+Started POST "/grubbers" for 127.0.0.1 at 2014-10-15 18:10:57 -0400
+Processing by GrubbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXLehykRx7L7Fid9ku4iAW9LG221k5g79zGd+u+VhTI=", "grubber"=>{"email"=>"a@a", "mobile"=>"123-123-1234", "password"=>"[FILTERED]"}, "commit"=>"Create Grubber"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "grubbers" ("created_at", "email", "email_ok", "mobile", "password", "subscribed", "text_ok", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2014-10-15 22:10:57.996325"], ["email", "a@a"], ["email_ok", "t"], ["mobile", "123-123-1234"], ["password", "123"], ["subscribed", "t"], ["text_ok", "t"], ["updated_at", "2014-10-15 22:10:57.996325"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3010/grubbers.9
+Completed 302 Found in 8ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/grubbers.9" for 127.0.0.1 at 2014-10-15 18:10:58 -0400
+Processing by GrubbersController#index as 
+  Rendered grubbers/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/grubbers.css?body=1" for 127.0.0.1 at 2014-10-15 18:10:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-15 18:10:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-15 18:10:58 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-15 18:10:58 -0400
+
+
+Started GET "/assets/grubbers.js?body=1" for 127.0.0.1 at 2014-10-15 18:10:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-15 18:10:58 -0400
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2014-10-15 18:11:11 -0400
+Processing by Rails::InfoController#routes as HTML
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/railties-4.1.6/lib/rails/templates/rails/info/routes.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/grubbers.css?body=1" for 127.0.0.1 at 2014-10-15 18:11:53 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-15 18:11:53 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-15 18:11:53 -0400
+
+
+Started GET "/assets/grubbers.js?body=1" for 127.0.0.1 at 2014-10-15 18:11:53 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-15 18:11:53 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-15 18:11:53 -0400
+
+
+Started POST "/grubbers" for 127.0.0.1 at 2014-10-15 18:11:58 -0400
+Processing by GrubbersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXLehykRx7L7Fid9ku4iAW9LG221k5g79zGd+u+VhTI=", "grubber"=>{"email"=>"a@a", "mobile"=>"123-123-1234", "password"=>"[FILTERED]"}, "commit"=>"Create Grubber"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "grubbers" ("created_at", "email", "email_ok", "mobile", "password", "subscribed", "text_ok", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", "2014-10-15 22:11:58.204116"], ["email", "a@a"], ["email_ok", "t"], ["mobile", "123-123-1234"], ["password", "123"], ["subscribed", "t"], ["text_ok", "t"], ["updated_at", "2014-10-15 22:11:58.204116"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3010/grubbers/10
+Completed 302 Found in 18ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/grubbers/10" for 127.0.0.1 at 2014-10-15 18:11:58 -0400
+Processing by GrubbersController#show as HTML
+  Parameters: {"id"=>"10"}
+  Rendered grubbers/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (/Users/kenguie/projects/Wed/pizza/pizza/app/views/grubbers/show.html.erb:7: syntax error, unexpected ')', expecting :: or '[' or '.'
+... submit_tag, "Let's do this!" );@output_buffer.safe_append='
+...                               ^
+/Users/kenguie/projects/Wed/pizza/pizza/app/views/grubbers/show.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+	'.freeze; end ;@output_buffer.to_s
+	             ^
+/Users/kenguie/projects/Wed/pizza/pizza/app/views/grubbers/show.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/kenguie/projects/Wed/pizza/pizza/app/views/grubbers/show.html.erb:11: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/grubbers/show.html.erb:7: syntax error, unexpected ')', expecting :: or '[' or '.'
+  app/views/grubbers/show.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+  app/views/grubbers/show.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/grubbers/show.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.3ms)
+
+
+Started GET "/grubbers/10" for 127.0.0.1 at 2014-10-15 18:12:27 -0400
+Processing by GrubbersController#show as HTML
+  Parameters: {"id"=>"10"}
+  Rendered grubbers/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/Users/kenguie/projects/Wed/pizza/pizza/app/views/grubbers/show.html.erb:9: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/grubbers/show.html.erb:9: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.3ms)
+
+
+Started GET "/grubbers/10" for 127.0.0.1 at 2014-10-15 21:24:50 -0400
+Processing by GrubbersController#show as HTML
+  Parameters: {"id"=>"10"}
+  Rendered grubbers/show.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 15ms
+
+SyntaxError (/Users/kenguie/projects/Wed/pizza/pizza/app/views/grubbers/show.html.erb:9: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/grubbers/show.html.erb:9: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.4ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.2ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.9ms)
+
+
+Started GET "/grubbers/10" for 127.0.0.1 at 2014-10-15 21:29:34 -0400
+Processing by GrubbersController#show as HTML
+  Parameters: {"id"=>"10"}
+  Rendered grubbers/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (/Users/kenguie/projects/Wed/pizza/pizza/app/views/grubbers/show.html.erb:9: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/grubbers/show.html.erb:9: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.3ms)
+
+
+Started GET "/grubbers/10" for 127.0.0.1 at 2014-10-15 21:30:02 -0400
+Processing by GrubbersController#show as HTML
+  Parameters: {"id"=>"10"}
+  Rendered grubbers/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 5ms
+
+SyntaxError (/Users/kenguie/projects/Wed/pizza/pizza/app/views/grubbers/show.html.erb:9: syntax error, unexpected keyword_end, expecting end-of-input
+@output_buffer.safe_append='	'.freeze; end ;@output_buffer.to_s
+                            	             ^):
+  app/views/grubbers/show.html.erb:9: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started GET "/grubbers/10" for 127.0.0.1 at 2014-10-15 21:31:10 -0400
+Processing by GrubbersController#show as HTML
+  Parameters: {"id"=>"10"}
+  Rendered grubbers/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/Users/kenguie/projects/Wed/pizza/pizza/app/views/grubbers/show.html.erb:7: syntax error, unexpected ')', expecting :: or '[' or '.'
+... submit_tag, "Let's do this!" );@output_buffer.safe_append='
+...                               ^
+/Users/kenguie/projects/Wed/pizza/pizza/app/views/grubbers/show.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;	 end 
+         	    ^
+/Users/kenguie/projects/Wed/pizza/pizza/app/views/grubbers/show.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/kenguie/projects/Wed/pizza/pizza/app/views/grubbers/show.html.erb:12: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/grubbers/show.html.erb:7: syntax error, unexpected ')', expecting :: or '[' or '.'
+  app/views/grubbers/show.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+  app/views/grubbers/show.html.erb:10: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/grubbers/show.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.3ms)
+
+
+Started GET "/grubbers/10" for 127.0.0.1 at 2014-10-15 21:31:27 -0400
+Processing by GrubbersController#show as HTML
+  Parameters: {"id"=>"10"}
+  Rendered grubbers/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (/Users/kenguie/projects/Wed/pizza/pizza/app/views/grubbers/show.html.erb:10: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/grubbers/show.html.erb:10: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.2ms)
+
+
+Started GET "/grubbers/10" for 127.0.0.1 at 2014-10-15 21:31:50 -0400
+Processing by GrubbersController#show as HTML
+  Parameters: {"id"=>"10"}
+  Rendered grubbers/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 62ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-15 21:31:50 -0400
+
+
+Started GET "/assets/grubbers.js?body=1" for 127.0.0.1 at 2014-10-15 21:31:50 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-15 21:31:50 -0400
+
+
+Started GET "/assets/grubbers.css?body=1" for 127.0.0.1 at 2014-10-15 21:31:50 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-15 21:31:50 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-15 21:31:50 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-15 21:31:50 -0400
+
+
+Started POST "/grubbers/message" for 127.0.0.1 at 2014-10-15 21:32:18 -0400
+Processing by GrubbersController#message as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXLehykRx7L7Fid9ku4iAW9LG221k5g79zGd+u+VhTI=", "body"=>"Pizza's here!", "commit"=>"Let's do this!"}
+Completed 500 Internal Server Error in 4ms
+
+NameError (uninitialized constant GrubbersController::Mandrill):
+  app/controllers/grubbers_controller.rb:6:in `message'
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.3ms)
+
+
+Started POST "/grubbers/message" for 127.0.0.1 at 2014-10-15 21:33:03 -0400
+Processing by GrubbersController#message as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXLehykRx7L7Fid9ku4iAW9LG221k5g79zGd+u+VhTI=", "body"=>"Pizza's here!", "commit"=>"Let's do this!"}
+Completed 500 Internal Server Error in 2ms
+
+NameError (uninitialized constant GrubbersController::Mandrill):
+  app/controllers/grubbers_controller.rb:6:in `message'
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.2ms)
+
+
+Started POST "/grubbers/message" for 127.0.0.1 at 2014-10-15 21:34:40 -0400
+Processing by GrubbersController#message as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXLehykRx7L7Fid9ku4iAW9LG221k5g79zGd+u+VhTI=", "body"=>"Pizza's here!", "commit"=>"Let's do this!"}
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant GrubbersController::Mandrill):
+  app/controllers/grubbers_controller.rb:6:in `message'
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.4ms)
+
+
+Started POST "/grubbers/message" for 127.0.0.1 at 2014-10-15 21:36:30 -0400
+Processing by GrubbersController#message as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXLehykRx7L7Fid9ku4iAW9LG221k5g79zGd+u+VhTI=", "body"=>"Pizza's here!", "commit"=>"Let's do this!"}
+Completed 500 Internal Server Error in 30ms
+
+LoadError (cannot load such file -- mandrill):
+  app/controllers/grubbers_controller.rb:6:in `message'
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.8ms)
+
+
+Started POST "/grubbers/message" for 127.0.0.1 at 2014-10-15 21:37:10 -0400
+
+LoadError (cannot load such file -- mandrill):
+  app/controllers/grubbers_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.5ms)
+
+
+Started POST "/grubbers/message" for 127.0.0.1 at 2014-10-15 21:39:25 -0400
+Processing by GrubbersController#message as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXLehykRx7L7Fid9ku4iAW9LG221k5g79zGd+u+VhTI=", "body"=>"Pizza's here!", "commit"=>"Let's do this!"}
+Completed 500 Internal Server Error in 2ms
+
+NameError (uninitialized constant GrubbersController::Mandrill):
+  app/controllers/grubbers_controller.rb:6:in `message'
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.0ms)
+
+
+Started POST "/grubbers/message" for 127.0.0.1 at 2014-10-15 21:48:48 -0400
+Processing by GrubbersController#message as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXLehykRx7L7Fid9ku4iAW9LG221k5g79zGd+u+VhTI=", "body"=>"Pizza's here!", "commit"=>"Let's do this!"}
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant GrubbersController::Mandrill):
+  app/controllers/grubbers_controller.rb:6:in `message'
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.2ms)
+
+
+Started POST "/grubbers/message" for 127.0.0.1 at 2014-10-15 21:49:48 -0400
+Processing by GrubbersController#message as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXLehykRx7L7Fid9ku4iAW9LG221k5g79zGd+u+VhTI=", "body"=>"Pizza's here!", "commit"=>"Let's do this!"}
+Completed 500 Internal Server Error in 2ms
+
+NameError (uninitialized constant GrubbersController::Mandrill):
+  app/controllers/grubbers_controller.rb:6:in `message'
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.4ms)
+
+
+Started POST "/grubbers/message" for 127.0.0.1 at 2014-10-15 21:49:59 -0400
+Processing by GrubbersController#message as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXLehykRx7L7Fid9ku4iAW9LG221k5g79zGd+u+VhTI=", "body"=>"Pizza's here!", "commit"=>"Let's do this!"}
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant GrubbersController::Mandrill):
+  app/controllers/grubbers_controller.rb:6:in `message'
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.6ms)
+
+
+Started POST "/grubbers/message" for 127.0.0.1 at 2014-10-15 22:07:15 -0400
+
+SyntaxError (/Users/kenguie/projects/Wed/pizza/pizza/app/controllers/grubbers_controller.rb:31: syntax error, unexpected tIVAR, expecting keyword_do or '{' or '('
+			:to=>nyhunter77@gmail.com, 
+			                     ^
+/Users/kenguie/projects/Wed/pizza/pizza/app/controllers/grubbers_controller.rb:32: syntax error, unexpected =>, expecting :: or '[' or '.'
+			:html=>"Pizza's here!", 
+			       ^
+/Users/kenguie/projects/Wed/pizza/pizza/app/controllers/grubbers_controller.rb:32: syntax error, unexpected ',', expecting keyword_end
+			:html=>"Pizza's here!", 
+			                       ^
+/Users/kenguie/projects/Wed/pizza/pizza/app/controllers/grubbers_controller.rb:33: syntax error, unexpected ',', expecting keyword_end):
+  app/controllers/grubbers_controller.rb:31: syntax error, unexpected tIVAR, expecting keyword_do or '{' or '('
+  app/controllers/grubbers_controller.rb:32: syntax error, unexpected =>, expecting :: or '[' or '.'
+  app/controllers/grubbers_controller.rb:32: syntax error, unexpected ',', expecting keyword_end
+  app/controllers/grubbers_controller.rb:33: syntax error, unexpected ',', expecting keyword_end
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.8ms)
+
+
+Started POST "/grubbers/message" for 127.0.0.1 at 2014-10-15 22:07:42 -0400
+Processing by GrubbersController#message as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXLehykRx7L7Fid9ku4iAW9LG221k5g79zGd+u+VhTI=", "body"=>"Pizza's here!", "commit"=>"Let's do this!"}
+Completed 500 Internal Server Error in 2ms
+
+LoadError (cannot load such file -- mandrill):
+  app/controllers/grubbers_controller.rb:23:in `message'
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.5ms)
+
+
+Started POST "/grubbers/message" for 127.0.0.1 at 2014-10-15 22:08:05 -0400
+Processing by GrubbersController#message as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rXLehykRx7L7Fid9ku4iAW9LG221k5g79zGd+u+VhTI=", "body"=>"Pizza's here!", "commit"=>"Let's do this!"}
+Completed 500 Internal Server Error in 17ms
+
+LoadError (cannot load such file -- mandrill-api):
+  app/controllers/grubbers_controller.rb:23:in `message'
+
+
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/kenguie/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.1ms)
