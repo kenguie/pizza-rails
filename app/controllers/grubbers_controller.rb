@@ -1,39 +1,17 @@
 class GrubbersController < ApplicationController
 
 	def message
+		require 'mandrill'
 		@message = params[:body]
 		puts "*********** sending messages *************"
-			# m = Mandrill::API.new
-			# message = {
-			# :subject=> "Grub Alert",
-			# :from_name=> "Grub Tracker",
-			# :text=>"Pizza's here!",
-			# :to=>[
-			# {
-			# :email=> "kenrickguie@gmail.com",
-			# :name=> "Ken"
-			# }
-			# ],
-			# :html=>"<html><h1>Hi <strong>Pizza is here!</strong>, come now!</h1></html>",
-			# :from_email=>"nyhunter77@gmail.com"
-			# }
-			# sending = m.messages.send message
-			# puts sending
 
-			require 'mandrill'
+		#Grubber.email_grubbers(message)
 
-			# send a new message
-			m = Mandrill::API.new
-			message = { 
-			:subject=> "Pizza's here!", 
-			:from_name=> "Pizza Alert",
-			:from_email=>"kenrickguie@gmail.com",
-			:to=>"nyhunter77@gmail.com", 
-			:html=>"Pizza's here!", 
-			:merge_vars => "Pizza is here!",
-			:preserve_recipients => false
-			} 
-			sending = m.messages.send message
+		Grubber.emailable.each do |grubber|
+			grubber.send_email(message)
+		end
+
+		redirect_to message_grubbers_path
 	end
 
   def index

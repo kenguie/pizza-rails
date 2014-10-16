@@ -1,6 +1,9 @@
 class Grubber < ActiveRecord::Base
 	scope :subscribed, ->{where(subscribed: true) } 
 
+	scope :emailable, ->{where(email_ok: true, subscribed: true)}
+	scope :textable , ->{subscribed.where(text_ok: true)}
+
 	validates :password, presence: true
 	before_create :configure_new_grubber
 
@@ -15,4 +18,62 @@ class Grubber < ActiveRecord::Base
   		end
 	end 
 
+	def send_email(message_body) #instance method
+
+			recipient = [{email: self.email}]
+			m = Mandrill::API.new
+			message = {
+			:subject=> "Grub Alert",
+			:from_name=> "Grub Tracker",
+			:text=> message_body,
+			:to=>[ #emailable_grubbers          #recipient - for class method 
+			{  
+			:email=> "kenrickguie@gmail.com",
+			# :name=> "Ken"
+			}
+			],
+			:html=>"<html><h1>Hi <strong>#{message_body}</strong>, come now!</h1></html>",
+			:from_email=>"nyhunter77@gmail.com"
+			}
+			sending = m.messages.send message
+			puts sending
+
+	end  # gotta go over the instance method again ####################
+
+		def self.email_grubbers(message_body)  # instance is better(not self) - one email at a time to 1 recipient 
+		# m = Mandrill::API.new
+
+		Grubber.emailable.each do |grubber|
+			grubber.send_email(message_body)  
+		end
+	end
+
+	# def self.email_grubbers(message_body)  # this is class method - not a good idea, instance is better(not self) - one email at a time to 1 recipient 
+	# 	# m = Mandrill::API.new
+
+	# 	emailable_grubbers = Grubber.emailable.map do |grubber|  
+	# 		Hash(email: grubber.email) 
+	# 	end
+
+	# 	emailable_grubbers.each do |email|
+	# 		recipient = [email]
+	# 		m = Mandrill::API.new
+	# 		message = {
+	# 		:subject=> "Grub Alert",
+	# 		:from_name=> "Grub Tracker",
+	# 		:text=> message_body,
+	# 		:to=>[ #emailable_grubbers          #recipient - for class method 
+	# 		{  
+	# 		:email=> "kenrickguie@gmail.com",
+	# 		# :name=> "Ken"
+	# 		}
+	# 		],
+	# 		:html=>"<html><h1>Hi <strong>#{message_body}</strong>, come now!</h1></html>",
+	# 		:from_email=>"nyhunter77@gmail.com"
+	# 		}
+	# 		sending = m.messages.send message
+	# 		puts sending
+
+	# 	end
+	#end
 end
