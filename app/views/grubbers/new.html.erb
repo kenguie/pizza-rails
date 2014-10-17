@@ -1,5 +1,8 @@
 <h1>Hello Future Grubber, I greet you!</h1>
 
+<% if current_grubber %>
+	<p> Want to send a message? </p>
+<% else %>
 <p> How would you like to be notified? Enter your email, mobile number, or both. </p>
 
 <%=form_for @grubber do |f| %>

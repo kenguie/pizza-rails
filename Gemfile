@@ -28,10 +28,14 @@ gem 'spring',        group: :development
 gem 'twilio-ruby'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'rails_12factor'
+gem 'pg'
 # Use unicorn as the app server
 # gem 'unicorn'
-
+gem 'global_phone'
+group :development do
+  gem 'global_phone_dbgen', github: 'sstephenson/global_phone'
+end
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

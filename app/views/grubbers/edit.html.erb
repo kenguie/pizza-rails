@@ -1,2 +1,34 @@
-<h1>Grubbers#edit</h1>
-<p>Find me in app/views/grubbers/edit.html.erb</p>
+<h1>Welcome Grubber, Good to have you back! </h1>
+
+<p> How would you like to be notified? Enter your email, mobile number, or both. </p>
+
+<%=form_for @grubber do |f| %>
+	<% if @grubber.errors.any? %>
+		<ul>
+		<% @grubber.errors.full_messages.each do |msg| %>
+			<li> <%= msg %> </li>
+		<% end %>
+		</ul>
+	<% end%>
+
+	<%= f.label :email  %>
+	<%= f.text_field :email %><br/>
+	<%= f.check_box :email_ok %>
+	<% if @grubber.email_ok %>
+		<span class="detail"> (Uncheck to start email alerts) </span>
+	<% else %>
+		<span class="detail"> (Check to receive text alerts) </span>
+	<% end %>
+
+	<% if @grubber.text_ok %>
+	<%= f.label :mobile %>
+	<%= f.phone_field :mobile %><br/>
+	<%= f.check_box :mobile_ok %>
+	<span class="detail"> (receive texts?) </span><br/>
+
+	<p class="detail"> Want to stop receiving alerts? Uncheck this box: </p>
+	<% if @grubber.subscribed %>
+		<%= f.check_box :subscribed %>
+
+	<%= f.submit %>
+<% end %>

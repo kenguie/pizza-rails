@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
 
 # post 'grubbers/message', to 'grubbers#message' does the same thing as message below 
+get 'signin', to: 'sessions#new'
+post 'sessions', to: 'sessions#create'
+delete 'logout', to: 'sessions#destroy'
 
-resources :grubbers do
+
+post '/api/sms', to: 'twilio#sms'
+get 'message', to: 'grubbers#alert'
+get 'sent', to: 'grubbers#sent'
+
+
+resources :grubbers, except: :index do
   collection do #got rid of the id requirement
     post 'message'
   end
